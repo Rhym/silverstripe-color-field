@@ -14,7 +14,8 @@
     }
   ],
   "require": {
-    "composer/installers": "*"
+    "composer/installers": "*",
+    "silverstripe/framework": "^4.0"
   },
   "support": {
     "issues": "https://github.com/Rhym/silverstripe-color-field/issues"

@@ -1,5 +1,10 @@
 <?php
 
+namespace Rhym\ColorField;
+
+use SilverStripe\View\Requirements;
+use SilverStripe\Forms\TextField;
+
 /**
  * Class ColorField
  */
@@ -62,6 +67,7 @@ class ColorField extends TextField
         }
 
         $obj = ($properties) ? $this->customise($properties) : $this;
+
         return $obj->renderWith($this->getTemplates());
     }
 

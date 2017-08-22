@@ -15,12 +15,18 @@
         }
     }
     .iris-color-label {
+        margin: 0;
+
         .ss-ui-button {
+            font-size: 0.9em;
+            padding: 5px 10px;
             border-right-width: 0;
-            padding: 7px;
+            padding: 5px 10px;
             margin-right: 0;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            display: block;
+
             .ui-button-text {
                 padding: 0;
             }
@@ -31,9 +37,12 @@
 .color {
     &.field {
         .color-picker {
+            font-size: 0.9em;
             width: auto;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
+            display: inline-block;
+            padding: 5px 10px;
         }
     }
 }

@@ -36,9 +36,9 @@ class ColorField extends TextField
     {
         parent::__construct($name, $title, $value, 7, $form);
 
-        Requirements::css('ryanpotter/silverstripe-color-field: /css/colorpicker.css');
-        Requirements::javascript('ryanpotter/silverstripe-color-field: /javascript/lib/colorpicker.min.js');
-        Requirements::javascript('ryanpotter/silverstripe-color-field: /javascript/colorpicker.init.js');
+        Requirements::css('ryanpotter/silverstripe-color-field: /client/css/colorpicker.css');
+        Requirements::javascript('ryanpotter/silverstripe-color-field: /client/javascript/lib/colorpicker.min.js');
+        Requirements::javascript('ryanpotter/silverstripe-color-field: /client/javascript/colorpicker.init.js');
 
         $this->addExtraClass('text');
     }

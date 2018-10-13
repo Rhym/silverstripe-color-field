@@ -1,7 +1,7 @@
 {
   "name": "ryanpotter/silverstripe-color-field",
   "description": "Silverstripe Color Field",
-  "type": "silverstripe-module",
+  "type": "silverstripe-vendormodule",
   "keywords": [
     "silverstripe"
   ],
@@ -27,6 +27,9 @@
     "issues": "https://github.com/Rhym/silverstripe-color-field/issues"
   },
   "extra": {
-    "installer-name": "silverstripe-color-field"
+    "installer-name": "silverstripe-color-field",
+       "expose": [
+        "client"
+         ]
   }
 }

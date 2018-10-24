@@ -1,0 +1,39 @@
+.iris-container {
+  position: relative;
+}
+
+.iris-container .ui-widget-content {
+  background: transparent none;
+}
+
+.iris-container .ui-slider-vertical {
+  width: auto;
+  height: auto;
+}
+
+.iris-container .ui-slider-vertical .ui-slider-handle {
+  margin-bottom: 0;
+}
+
+.iris-container .iris-color-label .ss-ui-button {
+  border-right-width: 0;
+  padding: 7px;
+  margin-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.iris-container .iris-color-label .ss-ui-button .ui-button-text {
+  padding: 0;
+}
+
+.color.field .color-picker {
+  width: auto;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.iris-picker {
+  position: absolute !important;
+  z-index: 99999;
+}

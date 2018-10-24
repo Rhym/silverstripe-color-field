@@ -1,0 +1,8 @@
+## ignorance is bliss
+
+.DS_Store
+._.gitignore
+*.sublime-*
+*.map
+/.sass-cache/
+/node_modules/

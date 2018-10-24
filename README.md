@@ -1,13 +1,31 @@
-# Silverstripe Color Field
+# SilverStripe Color Field
+
+[![Latest Stable Version](https://poser.pugx.org/ryanpotter/silverstripe-color-field/v/stable)](https://packagist.org/packages/ryanpotter/silverstripe-color-field)
+[![Total Downloads](https://poser.pugx.org/ryanpotter/silverstripe-color-field/downloads)](https://packagist.org/packages/ryanpotter/silverstripe-color-field)
+[![Monthly Downloads](https://poser.pugx.org/ryanpotter/silverstripe-color-field/d/monthly)](https://packagist.org/packages/ryanpotter/silverstripe-color-field)
 
 A colour picker field for the Silverstripe CMS.
 
 Uses [Iris Colour Picker](https://github.com/Automattic/Iris).
 
+### Installation
+
+Installation with composer:
+
+```bash
+composer require ryanpotter/silverstripe-color-field
+```
+
+### Usage
+
 ```php
-private static $db = array(
-  'MyColor' => 'Varchar(7)'
-);
+use RyanPotter\SilverStripeColorField\Forms\ColorField;
+```
+
+```php
+private static $db = [
+    'MyColor' => DBVarchar::class . '(7)',
+];
 ```
 
 ```php
@@ -16,7 +34,7 @@ ColorField::create('MyColor')
 
 ### Screenshot
 
-![Screenshot](https://cloud.githubusercontent.com/assets/1136811/9506805/511c2b40-4c9e-11e5-85e8-4b08dec3a92a.png)
+![Screenshot](https://github.com/Rhym/silverstripe-color-field/blob/master/screenshot.png)
 
 ### Configuration
 

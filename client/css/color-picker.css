@@ -1,36 +1,40 @@
-.iris-container {
+.c-color-picker {
   position: relative;
+  font-size: 0;
 }
 
-.iris-container .ui-widget-content {
-  background: transparent none;
-}
-
-.iris-container .ui-slider-vertical {
-  width: auto;
-  height: auto;
-}
-
-.iris-container .ui-slider-vertical .ui-slider-handle {
-  margin-bottom: 0;
-}
-
-.iris-container .iris-color-label .ss-ui-button {
+.c-color-picker__label {
+  font-size: 13px;
+  padding: 0.5385rem 1em;
+  border: 1px solid #cbd3df;
   border-right-width: 0;
-  padding: 7px;
-  margin-right: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+  border-top-left-radius: 0.23rem;
+  border-bottom-left-radius: 0.23rem;
 }
 
-.iris-container .iris-color-label .ss-ui-button .ui-button-text {
-  padding: 0;
+.c-color-picker__text {
+
 }
 
-.color.field .color-picker {
+.c-color-picker__wrapper {
+  display: inline-block;
+  border-top-right-radius: 0.23rem;
+  border-bottom-right-radius: 0.23rem;
+}
+
+.color.field .c-color-picker__input {
+  border-color: rgba(0, 0, 0, 0.25);
+  display: inline-block;
   width: auto;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.color.field .c-color-picker__input:focus {
+  border-color: rgba(0, 0, 0, 0.25);
 }
 
 .iris-picker {

@@ -8,6 +8,7 @@ use SilverStripe\View\Requirements;
 
 /**
  * Class ColorField
+ * @package RyanPotter\SilverStripeColorField\Forms
  */
 class ColorField extends TextField
 {
@@ -28,7 +29,8 @@ class ColorField extends TextField
   private static $colors = [];
 
   /**
-   * @param string $name
+   * @desc ColorField constructor.
+   * @param $name
    * @param null $title
    * @param string $value
    * @param null $form
@@ -50,20 +52,34 @@ class ColorField extends TextField
    */
   public function Field($properties = []): DBHTMLText
   {
-    $this->addExtraClass('color-picker');
-    $style = 'background-image: none; background-color:' . ($this->value ? $this->value : '#ffffff') . '; color: ' . ($this->getTextColor()) . ';';
+    $this->addExtraClass('c-color-picker__input js-color-picker');
+
+    /**
+     * Assign a background color to the field.
+     */
+    $style = sprintf(
+      'background-image: none; background-color: %s; color: %s;',
+      $this->value ? $this->value : '#ffffff',
+      $this->getTextColor()
+    );
     $this->setAttribute('style', $style);
+
+    /**
+     * Apply custom data attributes for the Iris Color Picker.
+     */
     if ($colors = $this->config()->colors) {
       $pallets = '"' . implode('", "', $colors) . '"';
-      $this->setAttribute('data-palette',
-        '[' . $pallets . ']');
+      $this->setAttribute('data-palette', '[' . $pallets . ']');
     }
+
     $properties['type'] = 'text';
-    $properties['class'] = 'text' . ($this->extraClass() ? $this->extraClass() : '');
     $properties['tabindex'] = $this->getAttribute('tabindex');
     $properties['maxlength'] = ($this->maxLength) ? $this->maxLength : null;
     $properties['size'] = ($this->maxLength) ? min($this->maxLength, 30) : null;
 
+    /**
+     * Check if the field is disabled.
+     */
     if ($this->disabled) {
       $properties['disabled'] = 'disabled';
     }
@@ -74,22 +90,19 @@ class ColorField extends TextField
   }
 
   /**
-   * @param $validator
+   * @param \SilverStripe\Forms\Validator $validator
    * @return bool
    */
-  function validate($validator)
+  function validate($validator): bool
   {
     return true;
   }
 
   /**
-   * Set the colour to be white or black
-   * depending on the shade of the background
-   * colour of the Field.
-   *
+   * @desc Set the colour to be white or black depending on the shade of the background colour of the Field.
    * @return string
    */
-  protected function getTextColor()
+  protected function getTextColor(): string
   {
     if ($this->value) {
       $c = intval(str_replace("#", "", $this->value), 16);
@@ -103,5 +116,4 @@ class ColorField extends TextField
       return '#000000';
     }
   }
-
 }

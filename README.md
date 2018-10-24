@@ -1,4 +1,4 @@
-#Silverstripe Color Field
+# Silverstripe Color Field
 
 A colour picker field for the Silverstripe CMS.
 
@@ -13,16 +13,17 @@ private static $db = array(
 ```php
 ColorField::create('MyColor')
 ```
-###Screenshot
+
+### Screenshot
 
 ![Screenshot](https://cloud.githubusercontent.com/assets/1136811/9506805/511c2b40-4c9e-11e5-85e8-4b08dec3a92a.png)
 
-###Configuration
+### Configuration
 
 Add as many colours as you want to the palettes.
 
 ```yml
-ColorField:
+RyanPotter\SilverStripeColorField\Forms\ColorField:
   colors:
     - '#1976D2'
     - '#2196F3'
